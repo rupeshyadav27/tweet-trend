@@ -1,45 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.example</groupId>
-    <artifactId>new-mave</artifactId>
-    <version>1.0.0</version>
-    <packaging>jar</packaging>
-
-    <name>new-mave</name>
-    <description>Demo project for Maven and Jenkins</description>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-        <!-- Add other dependencies as needed -->
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.example.YourMainClass</mainClass> <!-- Replace with your main class -->
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
+<project>
+  ...
+  <distributionManagement>
+    <repository>
+      <id>internal-repo</id>
+      <url>http://repository.example.com/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>internal-snapshot-repo</id>
+      <url>http://repository.example.com/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  ...
 </project>
